@@ -192,9 +192,10 @@ console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-// "this" when joe.scope() is invoked is the object
+// "this" when joe.scope() is invoked is the "joe" object, because that's the context (aka the containing object) of the .scope() method. 
 //
 // 2. What is "this" when joe.scopeArrow() is invoked?
+// When joe.scopeArrow() is invoked, "this" is the window object, which is essentially the global object in JavaScript. The window object is the context for all functions executed outside of an object context.
 //
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// "this" is different because arrow functions inherit the enclosing context which they are declared in, even if they're methods of an object or they're invoked in a different scope. So, since the .scopeArrow() function is declared in the global scope, its context will always be the window object when invoked.
